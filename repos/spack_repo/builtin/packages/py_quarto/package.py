@@ -12,7 +12,6 @@ class PyQuarto(PythonPackage):
     """Quarto is an open-source scientific and technical publishing system built on Pandoc."""
 
     homepage = "https://quarto.org"
-
     pypi = "quarto-cli/quarto_cli-1.10.19.tar.gz"
 
     license("MIT")
