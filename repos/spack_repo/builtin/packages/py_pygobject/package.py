@@ -46,7 +46,7 @@ class PyPygobject(MesonPackage, PythonPackage):
     depends_on("libffi@3.0.0:", when="@3.46.0:")
 
     depends_on("glib", when="@:3.46.0")
-    depends_on("gobject-introspection", when="@:3.50.0")
+    depends_on("gobject-introspection", when="@:3.50")
     depends_on("py-pycairo", type=("build", "run"), when="@:3.46.0")
     depends_on("libffi", when="@:3.46.0")
 
