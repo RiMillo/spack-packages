@@ -63,6 +63,7 @@ class PyPygobject(MesonPackage, PythonPackage):
     def patch(self):
         filter_file(r"Pycairo_IMPORT", r"//Pycairo_IMPORT", "gi/pygi-foreign-cairo.c")
 
+
 class MesonBuilder(meson.MesonBuilder):
     def meson_args(self):
         args = super().meson_args()
