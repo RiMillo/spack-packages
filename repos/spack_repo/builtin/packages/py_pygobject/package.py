@@ -2,6 +2,7 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
 
+from spack_repo.builtin.build_systems import meson
 from spack_repo.builtin.build_systems.meson import MesonPackage
 from spack_repo.builtin.build_systems.python import PythonPackage
 
@@ -62,6 +63,7 @@ class PyPygobject(MesonPackage, PythonPackage):
     def patch(self):
         filter_file(r"Pycairo_IMPORT", r"//Pycairo_IMPORT", "gi/pygi-foreign-cairo.c")
 
+class MesonBuilder(meson.MesonBuilder):
     def meson_args(self):
         args = super().meson_args()
         perform_tests = "true" if self.run_tests else "false"
